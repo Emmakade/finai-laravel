@@ -1,0 +1,29 @@
+name: Deploy to Railway
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+        extensions: mbstring, intl, bcmath, xml, mysql
+
+    - name: Install Composer dependencies
+      run: composer install --no-dev --no-progress --prefer-dist
+
+    - name: Deploy to Railway
+      uses: railwayapp/railway-actions@v1
+      with:
+        railway_token: ${{ secrets.RAILWAY_TOKEN }}
+        project_id: ${{ secrets.RAILWAY_PROJECT_ID }}
