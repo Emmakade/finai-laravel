@@ -22,8 +22,10 @@ jobs:
     - name: Install Composer dependencies
       run: composer install --no-dev --no-progress --prefer-dist
 
+    - name: Install Railway CLI
+      run: npm install -g railway
+
     - name: Deploy to Railway
-      uses: railwayapp/railway-actions@v1
-      with:
-        railway_token: ${{ secrets.RAILWAY_TOKEN }}
-        project_id: ${{ secrets.RAILWAY_PROJECT_ID }}
+      env:
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      run: railway up --detach
