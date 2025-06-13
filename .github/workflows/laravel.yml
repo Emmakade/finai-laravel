@@ -28,4 +28,4 @@ jobs:
     - name: Deploy to Railway
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-      run: railway up --detach --service 73c55a9b-d265-4394-a004-028c92e092e2
+      run: railway up --detach --service "finai-laravel"
