@@ -16,14 +16,14 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2' # Ensure the PHP version matches your project's requirement
+        php-version: '8.2'
         extensions: mbstring, intl, bcmath, xml, mysql
 
     - name: Install Composer dependencies
       run: composer install --no-dev --no-progress --prefer-dist
 
     - name: Install Railway CLI
-      run: npm install -g railway
+      run: npm install -g @railway/cli
 
     - name: Deploy to Railway
       env:
