@@ -11,6 +11,7 @@ class AuthController extends Controller
 {
     public function register(Request $request)
     {
+        $request->headers->set('Accept', 'application/json');
         $validated = $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
