@@ -17,7 +17,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],  // Use '*' for all origins or specify allowed origins],
+    'allowed_origins' => ['*'],
 
     'allowed_origins_patterns' => [],
 
