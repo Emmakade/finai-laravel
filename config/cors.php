@@ -23,7 +23,7 @@ return [
         'http://localhost:5000',        // Flutter
         'http://127.0.0.1:5000',
         'http://127.0.0.1:8000',
-        'https://your-production-url.com', // Production domain
+        'https://finai-laravel.up.railway.app/', // Production domain
     ],
 
     'allowed_origins_patterns' => [],
