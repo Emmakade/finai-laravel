@@ -17,7 +17,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],  // Change to specific domains in production
+    'allowed_origins' => ['*'],
 
     'allowed_origins_patterns' => [],
 
