@@ -17,14 +17,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => [
-        'http://localhost:3000',        // React
-        'http://127.0.0.1:3000',
-        'http://localhost:5000',        // Flutter
-        'http://127.0.0.1:5000',
-        'http://127.0.0.1:8000',
-        'https://finai-laravel.up.railway.app/', // Production domain
-    ],
+    'allowed_origins' => ['*'],  // Change to specific domains in production
 
     'allowed_origins_patterns' => [],
 
