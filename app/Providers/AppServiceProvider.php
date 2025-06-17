@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
     //    $this->app->singleton(DeepSeekService::class, function ($app) {
     //         return new DeepSeekService();
     //     });
-        $this->app->singleton(\App\Services\DeepSeekService::class);
+        $this->app->singleton(\App\Services\CryptoService::class);
     }
 
     /**
