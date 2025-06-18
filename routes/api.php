@@ -2,15 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\AIController;
 
 use App\Http\Controllers\{
     AuthController, GoogleController, RegisterController, DashboardController, CryptoController,
     AIPredictionController
 };
-
-// Route::post('chat', [AIController::class, 'chat']);
-// Route::post('predict', [AIController::class, 'predict']);
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login'])->name('login');
