@@ -26,7 +26,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/filtered-symbols', [CryptoController::class, 'getFilteredSymbols']);
     Route::get('/symbols/{symbol}', [CryptoController::class, 'getSymbolDetails']);
     Route::get('/predict/{symbol}', [CryptoController::class, 'getPredictionWithConfidence']); //predicting with algorithm
-    Route::post('/predict', [AIPredictionController::class, 'getPrediction']);
 });
 
 use App\Http\Controllers\AIChatController;
