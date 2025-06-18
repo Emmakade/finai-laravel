@@ -29,4 +29,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('/predict', [AIPredictionController::class, 'getPrediction']);
 });
 
+use App\Http\Controllers\AIChatController;
 
+Route::middleware(['auth:sanctum', 'throttle:5,1'])->group(function () {
+    Route::post('/chat', [AIChatController::class, 'sendMessage']);
+});
