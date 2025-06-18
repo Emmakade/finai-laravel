@@ -100,22 +100,22 @@ class CryptoService
             $changes = [
                 '24h' => $marketData['price_change_percentage_24h'] ?? 0,
                 '7d' => $marketData['price_change_percentage_7d'] ?? 0,
-                '14d' => $marketData['price_change_percentage_14d'] ?? 0,
-                '30d' => $marketData['price_change_percentage_30d'] ?? 0,
-                '60d' => $marketData['price_change_percentage_60d'] ?? 0,
-                '200d' => $marketData['price_change_percentage_200d'] ?? 0,
-                '1y' => $marketData['price_change_percentage_1y'] ?? 0,
+                // '14d' => $marketData['price_change_percentage_14d'] ?? 0,
+                // '30d' => $marketData['price_change_percentage_30d'] ?? 0,
+                // '60d' => $marketData['price_change_percentage_60d'] ?? 0,
+                // '200d' => $marketData['price_change_percentage_200d'] ?? 0,
+                // '1y' => $marketData['price_change_percentage_1y'] ?? 0,
             ];
 
             // Define weights for timeframes
             $weights = [
                 '24h' => 0.4,
                 '7d' => 0.3,
-                '14d' => 0.15,
-                '30d' => 0.1,
-                '60d' => 0.03,
-                '200d' => 0.02,
-                '1y' => 0.02,
+                // '14d' => 0.15,
+                // '30d' => 0.1,
+                // '60d' => 0.03,
+                // '200d' => 0.02,
+                // '1y' => 0.02,
             ];
 
             // Calculate weighted average
